@@ -7,6 +7,8 @@
 
 function extractValues(data) {
   // Tu código aquí
+  let values = Object.values(data)
+  return values
 }
 
 /*  
