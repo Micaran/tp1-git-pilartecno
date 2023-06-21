@@ -7,6 +7,8 @@
 
 function extractValues(data) {
   // Tu código aquí
+  let values = Object.values(data)
+  return values
 }
 
 /*  
@@ -19,6 +21,12 @@ function extractValues(data) {
 
 function arrayToLengthCounters(array) {
   // Tu código aquí
+  let obj = {}
+  for (let i = 0; i < array.length; i++) {
+    let element = array[i];
+    obj[element] = element.length;
+  }
+  return obj;
 }
 
 /*  
@@ -31,6 +39,17 @@ function arrayToLengthCounters(array) {
 
 function findKeysInCommon(objeto1, objeto2) {
   // Tu código aquí
+  const keys1 = Object.keys(objeto1);
+  const keys2 = Object.keys(objeto2);
+  const commonKeys = []; 
+
+  for (let i = 0; i < keys1.length; i++) {
+    if (keys2.includes(keys1[i])) {
+      commonKeys.push(keys1[i]);
+    }
+  }
+
+  return commonKeys;
 }
 
 // Llamamos a las funciones y mostramos los resultados
